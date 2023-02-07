@@ -1,7 +1,3 @@
--- Skidded Script by 6akan / aori
-
-
---- Leaked By Rizy and Tokyo
 
 getgenv().keybind = "q"
 getgenv().prediction = 0.1258
@@ -69,11 +65,11 @@ FOV_Circle.Visible = false
 FOV_Circle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
 local Move_Circle = nil
 local accomidationfactor = 0.1
-local aorinjectbase = function(a) 
+local xeninjectbase = function(a) 
     rconsoleprint("@@LIGHT_MAGENTA@@") 
     rconsoleprint(a) 
 end
-local aori, aoricammisc, aorisilmisc = nil, nil, nil
+local xen, xencammisc, xensilmisc = nil, nil, nil
 local smoothnessstatus, notifstatus, unlockwhendeadstatus, unlockwhenlocalplayerknockedstatus, tracewhentargetradiusstatus, fovcirclestatus, silentfovcirclestatus  = "false", "false", "false", "false", "false", "false", "false"
 local smoothnessvalue, predictionvalue, silpredictionvalue = "Default", "Default", "Default"
 local predictionstatus, undergroundresolverstatus, silgrabbedvalue, silkodcheckstatus = "true", "true", "true", "true"
@@ -523,8 +519,8 @@ RunService.Stepped:Connect(function()
 end)
 
 rconsolename("Encrypted V2 | xen#9999")
-function aorimain()
-aorinjectbase([[
+function xenmain()
+xeninjectbase([[
 
                                   ___                       _    __   _____ 
                                   | __|_ _  __ _ _ _  _ _ __| |_  \ \ / /_  )
@@ -533,7 +529,7 @@ aorinjectbase([[
                                                     |__/|_|                   
 
 
-        made by tokyo#3030 . i love you xenn
+        made by xen#9999 . best exernal
 
 
                                 [1] Load Encrypt V2 []] .. ..[[]
@@ -542,12 +538,12 @@ aorinjectbase([[
 
                                 [X] Exit
 ]])
-aori = rconsoleinput("")
-aoriresponse()
+xen = rconsoleinput("")
+xenresponse()
 end
 
-function aoricammiscs()
-aorinjectbase([[
+function xencamisx()
+xeninjectbase([[
 
                                   ___                       _    __   _____ 
                                   | __|_ _  __ _ _ _  _ _ __| |_  \ \ / /_  )
@@ -566,18 +562,18 @@ aorinjectbase([[
                                         [4] Disable Local Death []] .. ..[[]
                                         [10] FOV RADIUS []] .. ..[[]
                                         [11] Keybind []] .. ..[[]
-                                        [10] More Settings []] .. ..[[]
                                         
                                         
+                                        [G] More Settings []] .. ..[[]
                                         [X] Go back to main menu
 ]])
-aoricammisc = rconsoleinput("")
-aoricammiscresponse()
+xencammisc = rconsoleinput("")
+xencammiscresponse()
 end
 
 
 function tokyocamset()
-aorinjectbase([[
+xeninjectbase([[
 
                                   ___                       _    __   _____ 
                                   | __|_ _  __ _ _ _  _ _ __| |_  \ \ / /_  )
@@ -599,13 +595,13 @@ aorinjectbase([[
                                         
                                         [X] Go back to tracer settings
 ]])
-aoricammisc = rconsoleinput("")
+xentracer2 = rconsoleinput("")
 aoricammiscresponse()
 end
 
 
-function aorisilmiscs()
-aorinjectbase([[
+function xenmisc()
+xeninjectbase([[
 
                                   ___                       _    __   _____ 
                                   | __|_ _  __ _ _ _  _ _ __| |_  \ \ / /_  )
@@ -630,12 +626,12 @@ aorinjectbase([[
                                 
                                         [X] Go back to main menu
 ]])
-aorisilmisc = rconsoleinput("")
-aorisilmiscresponse()
+xensilmisc = rconsoleinput("")
+xensilmiscresponse()
 end
 
-function aoriresponse()
-    if aori == "1" and getgenv().loaded == false then
+function xenresponse()
+    if xen == "1" and getgenv().loaded == false then
         Mouse.KeyDown:Connect(function(KeyPressed)
             if KeyPressed == string.lower(getgenv().keybind) then
                 pcall(function()
@@ -645,7 +641,7 @@ function aoriresponse()
                         Enemy = InRadius()
                         if getgenv().Notifications then
                             game.StarterGui:SetCore("SendNotification", {
-                                Title = "aorinject",
+                                Title = "xen#9999",
                                 Text = "Target:  " .. tostring(Enemy.Humanoid.DisplayName .. ".")
                             })
                         end
@@ -669,30 +665,30 @@ function aoriresponse()
         getgenv().loaded = true
         aorinjectstatus = "Loaded"
         rconsoleclear()
-        aorimain()
-    elseif aori == "1" and getgenv().loaded == true then
+        xenmain()
+    elseif xen == "1" and getgenv().loaded == true then
         rconsoleprint([[Already Loaded
 ]])
-        aori = rconsoleinput("")
-        aoriresponse()
-    elseif aori == "X" or aori == "x" then
-        game.Players.LocalPlayer:Kick("AorInject Kick")
-    elseif aori == "2" then
+        xen = rconsoleinput("")
+        xenresponse()
+    elseif xen == "X" or aori == "x" then
+        game.Players.LocalPlayer:Kick("xen#9999 support")
+    elseif xen == "2" then
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aori == "3" then
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     else
         rconsoleprint([[Unknown Command
 ]])
-        aori = rconsoleinput("")
-        aoriresponse()
+        xen = rconsoleinput("")
+        xenresponse()
     end
 end
 
-function aoricammiscresponse()
-    if aoricammisc == "1" then
+function xencammiscresponse()
+    if xencammisc == "1" then
         if getgenv().Notifications == true then
             getgenv().Notifications = false
             notifstatus = "false"
@@ -701,7 +697,7 @@ function aoricammiscresponse()
             notifstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "2" then
         if getgenv().SmoothnessValue == true then
             getgenv().SmoothnessValue = false
@@ -711,13 +707,13 @@ function aoricammiscresponse()
             smoothnessstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "3" then
         rconsoleprint("Smoothness: ")
         smoothnessvalue = rconsoleinput("")
         getgenv().smoothness = tonumber(smoothnessvalue)
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "4" then
         if getgenv().PredictionState == true then
             getgenv().PredictionState = false
@@ -727,13 +723,13 @@ function aoricammiscresponse()
             predictionstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "5" then
         rconsoleprint("Prediction: ")
         predictionvalue = rconsoleinput("")
         getgenv().prediction = tonumber(predictionvalue)
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "6" then
         if getgenv().UnlockWhenTargetDies == true then
             getgenv().UnlockWhenTargetDies = false
@@ -743,7 +739,7 @@ function aoricammiscresponse()
             unlockwhendeadstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "7" then
         if getgenv().UnlockWhenPlayerDies == true then
             getgenv().UnlockWhenPlayerDies = false
@@ -753,7 +749,7 @@ function aoricammiscresponse()
             unlockwhenlocalplayerknockedstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "8" then
         if getgenv().TracerRadius == true then
             getgenv().TracerRadius = false
@@ -763,7 +759,7 @@ function aoricammiscresponse()
             tracewhentargetradiusstatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
+        xencamisx()
     elseif aoricammisc == "9" then
         if FOV_Circle.Visible == true then
             FOV_Circle.Visible = false
@@ -773,31 +769,31 @@ function aoricammiscresponse()
             fovcirclestatus = "true"
         end
         rconsoleclear()
-        aoricammiscs()
-    elseif aoricammisc == "10" then
+        xencamisx()
+    elseif xencamisx == "10" then
         rconsoleprint("Keybind: ")
         keybindvalue = rconsoleinput("")
         getgenv().keybind = keybindvalue
         rconsoleclear()
-        aoricammiscs()
-    elseif aoricammisc == "0" then
+        xencamisx()
+    elseif xencamisx == "0" then
         rconsoleprint("FOV: ")
         fovvalue = rconsoleinput("")
         FOV_Circle.Radius = tonumber(fovvalue)
         rconsoleclear()
-        aoricammiscs()
-    elseif aoricammisc == "X" or aoricammisc == "x" then
+        xencamisx()
+    elseif xencamisx == "X" or xencamisx == "x" then
         rconsoleclear()
-        aorimain()
+        xenmain()
     else
         rconsoleprint([[Unknown Command
 ]])
         aoricammisc = rconsoleinput("")
-        aoricammiscresponse()
+        xencammiscresponse()
     end
 end
 
-function aorisilmiscresponse()
+function xensilmiscresponse()
     if aorisilmisc == "0" then
         if getgenv().AorinjectSettings.SilentAim == true then
             getgenv().AorinjectSettings.SilentAim = false
@@ -807,13 +803,13 @@ function aorisilmiscresponse()
             silentaimstatus = "Enabled"
         end
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "1" then
         rconsoleprint("Prediction: ")
         silpredictionvalue = rconsoleinput("")
         getgenv().AorinjectSettings.Prediction = tonumber(silpredictionvalue)
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "2" then
         if getgenv().AorinjectSettings.PredictionStatus == true then
             getgenv().AorinjectSettings.PredictionStatus = false
@@ -823,7 +819,7 @@ function aorisilmiscresponse()
             silpredictionstatus = "Enabled"
         end
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "3" then
         if getgenv().GrabbedCheck == true then
             getgenv().GrabbedCheck = false
@@ -833,7 +829,7 @@ function aorisilmiscresponse()
             silgrabbedvalue = "true"
         end
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "4" then
         if getgenv().KoCheck == true then
             getgenv().KoCheck = false
@@ -843,13 +839,13 @@ function aorisilmiscresponse()
             silkodcheckstatus = "true"
         end
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "5" then
         rconsoleprint("FOV: ")
         silentfovvalue = rconsoleinput("")
         getgenv().Aorinject.FOV = tonumber(silentfovvalue)
         rconsoleclear()
-        aorisilmiscs()
+        xenmisc()
     elseif aorisilmisc == "6" then
         if getgenv().Aorinject.ShowFOV == true then
             getgenv().Aorinject.ShowFOV = false
@@ -859,15 +855,15 @@ function aorisilmiscresponse()
             silentfovcirclestatus = "true"
         end
         rconsoleclear()
-        aorisilmiscs()()
+        xenmisc()()
     elseif aorisilmisc == "X" or aorisilmisc == "x" then
         rconsoleclear()
-        aorimain()
+        xenmain()
     else
         rconsoleprint([[Unknown Command
 ]])
         aorisilmisc = rconsoleinput("")
-        aorisilmiscresponse()
+        xensilmiscresponse()
     end
 end
 
@@ -884,4 +880,4 @@ __index = hookmetamethod(game, "__index", function(t, k)
 end)
 
 rconsoleclear()
-aorimain()
+xenmain()
